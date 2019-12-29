@@ -37,3 +37,13 @@ DROP USER 'ME'@'localhost';
 ```mysql
 DROP DATABASE YOUR_DATABASE_NAME;
 ```
+
+## Connect MySQL root account with normal user
+Connect with sudo
+```bash
+sudo mysql -u root -p
+```
+Alter root user
+```mysql
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'MY_PASS';
+```
