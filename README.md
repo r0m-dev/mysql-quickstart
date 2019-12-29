@@ -46,4 +46,5 @@ sudo mysql -u root -p
 Alter root user
 ```mysql
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'MY_PASS';
+mysql> flush privileges;
 ```
