@@ -48,3 +48,12 @@ Alter root user
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'MY_PASS';
 mysql> flush privileges;
 ```
+OR   
+```bash
+#!/bin/sh
+mysql <<-EOSQL
+  use mysql;
+  update user set plugin="mysql_native_password" where User='root';
+  FLUSH PRIVILEGES ;
+EOSQL
+```
